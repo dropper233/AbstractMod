@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "abstractmod",
+	"version": "${version}",
+	"name": "Abstract Mod",
+	"description": "This is a very abstract mod, for Chinese player.",
+	"authors": [
+		"dropper"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/dropper233/AbstractMod"
+	},
+	"license": "MIT",
+	"icon": "assets/abstractmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.dropper.AbstractMod"
+		],
+		"client": [
+			"com.dropper.AbstractModClient"
+		],
+		"fabric-datagen": [
+			"com.dropper.AbstractModDataGenerator"
+		]
+	},
+	"mixins": [
+		"abstractmod.mixins.json",
+		{
+			"config": "abstractmod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
